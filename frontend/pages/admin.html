@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | YaTanDeoSidSai Banking</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="overflow-y: auto;">
+    <nav class="navbar" style="padding: 20px 50px;">
+        <div class="logo">YaTanDeoSidSai - Admin Panel</div>
+        <button id="logoutBtn" class="btn-primary" style="width: auto; padding: 8px 20px;">Logout</button>
+    </nav>
+
+    <div class="dashboard-grid" style="padding: 50px; display: block;">
+        <div class="glass-card" style="max-width: 1000px; margin: auto;">
+            <h2>All Loan Applications</h2>
+            <p class="subtitle">Manage user loan applications securely.</p>
+            
+            <div id="securityAlert" class="security-banner"></div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid rgba(255, 255, 255, 0.2); text-align: left;">
+                        <th style="padding: 10px;">ID</th>
+                        <th style="padding: 10px;">Applicant</th>
+                        <th style="padding: 10px;">Amount</th>
+                        <th style="padding: 10px;">Income</th>
+                        <th style="padding: 10px;">Date</th>
+                        <th style="padding: 10px;">Status</th>
+                        <th style="padding: 10px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="loansTableBody">
+                    <!-- Data populated via JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/security.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

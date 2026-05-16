@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Recovery | YaTanDeoSidSai Banking</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-branding">
+            <h1 style="font-size: 3.5rem;">Recovery</h1>
+            <p style="color: var(--gold);">SECURE • TRUSTED • ELITE</p>
+        </div>
+        <div class="auth-form-area">
+            <div id="securityBanner" class="security-banner"></div>
+            
+            <div class="glass-card" id="forgot-step-1">
+                <h2>Reset Password</h2>
+                <p class="subtitle">Enter your username to receive an OTP.</p>
+                <form id="forgotForm">
+                    <div class="input-group">
+                        <label>Enter Username</label>
+                        <input type="text" name="username" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Send OTP</button>
+                    <div class="text-center" style="margin-top: 15px;">
+                        <a href="login.html">Back to Login</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="glass-card hidden" id="forgot-step-otp">
+                <h2>Verify Identity</h2>
+                <p class="subtitle">Check your email for the 6-digit OTP.</p>
+                <form id="otpForm">
+                    <div class="input-group">
+                        <input type="text" name="otp" maxlength="6" style="text-align: center; letter-spacing: 15px; font-size: 1.5rem;" placeholder="000000" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Verify OTP</button>
+                    <!-- Missing Resend OTP button, we can add it here if the user wanted it earlier -->
+                    <div class="text-center" style="margin-top: 15px;">
+                        <a href="#" class="resendOtpBtn">Resend OTP</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="glass-card hidden" id="forgot-step-reset">
+                <h2>New Password</h2>
+                <p class="subtitle">Enter a strong, secure password.</p>
+                <form id="resetForm">
+                    <div class="input-group">
+                        <label>New Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/security.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

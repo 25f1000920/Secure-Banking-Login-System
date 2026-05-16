@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Elite | YaTanDeoSidSai Banking</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-branding">
+            <h1 style="font-size: 3.5rem; letter-spacing: -2px;">YaTanDeoSidSai</h1>
+            <p style="color: var(--gold); letter-spacing: 4px; font-weight: 600; margin-bottom: 2rem;">SECURE • TRUSTED • ELITE</p>
+            <ul class="benefit-list">
+                <li>Biometric OTP Verification</li>
+                <li>AI-Powered Fraud Detection</li>
+                <li>Global Institutional Access</li>
+            </ul>
+        </div>
+
+        <div class="auth-form-area">
+            <div id="securityBanner" class="security-banner"></div>
+
+            <div class="glass-card" id="reg-step-1">
+                <h2>Create Account</h2>
+                <form id="regForm">
+                    <div style="display: flex; gap: 10px;">
+                        <div class="input-group"><label>First Name</label><input type="text" name="firstName" required></div>
+                        <div class="input-group"><label>Last Name</label><input type="text" name="lastName" required></div>
+                    </div>
+                    <div class="input-group"><label>Username</label><input type="text" name="username" required></div>
+                    <div class="input-group"><label>Email Address</label><input type="email" name="email" required></div>
+                    <div class="input-group"><label>Password</label><input type="password" name="password" required></div>
+                    <div class="input-group"><label>Confirm</label><input type="password" name="confirmPassword" required></div>
+                    <button type="submit" class="btn-primary">Register Account</button>
+                </form>
+            </div>
+
+            <div class="glass-card hidden" id="reg-step-otp">
+                <h2>Verify Email</h2>
+                <p class="subtitle">Check your inbox for your activation code.</p>
+                <form id="otpForm">
+                    <div class="input-group">
+                        <input type="text" name="otp" maxlength="6" style="text-align: center; letter-spacing: 15px;" placeholder="000000" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Verify & Activate</button>
+                    <div class="text-center" style="margin-top: 15px;">
+                        <a href="#" class="resendOtpBtn">Resend OTP</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/security.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

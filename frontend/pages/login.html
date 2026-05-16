@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Sign In | YaTanDeoSidSai Banking</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-branding">
+            <h1 style="font-size: 3.5rem; letter-spacing: -2px;">YaTanDeoSidSai</h1>
+            <p style="color: var(--gold); letter-spacing: 4px; font-weight: 600; margin-bottom: 2rem;">SECURE • TRUSTED • ELITE</p>
+            <p style="max-width: 450px; opacity: 0.7; line-height: 1.6;">
+                Experience the next generation of digital finance, protected by military-grade encryption and active threat detection.
+            </p>
+        </div>
+
+        <div class="auth-form-area">
+            <div id="securityBanner" class="security-banner"></div>
+
+            <div class="glass-card" id="auth-step-1">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Securely sign in to your vault.</p>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" name="username" required placeholder="User ID">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-primary">Authenticate</button>
+                    <div style="text-align: center; margin-top: 20px; font-size: 0.85rem;">
+                        <a href="forgot.html" style="color: var(--gold); text-decoration: none;">Forgot Password?</a>
+                        <p style="margin-top: 10px; opacity: 0.6;">Not a user? <a href="register.html" style="color: var(--gold);">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="glass-card hidden" id="auth-step-otp">
+                <h2>Identity Verification</h2>
+                <p class="subtitle">Enter the 6-digit code sent to your email.</p>
+                <form id="otpForm">
+                    <div class="input-group">
+                        <input type="text" name="otp" maxlength="6" style="text-align: center; letter-spacing: 15px; font-size: 1.5rem;" placeholder="000000" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Verify & Login</button>
+                    <div class="text-center" style="margin-top: 15px;">
+                        <a href="#" class="resendOtpBtn">Resend OTP</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/security.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
